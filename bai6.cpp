@@ -42,7 +42,7 @@ int main(void){
         }
     }
 // xuat mang sau khi nhan
-    printf (" A*B = ");
+    printf (" A*B = \n");
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < p; j++)
