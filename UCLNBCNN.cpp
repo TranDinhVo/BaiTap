@@ -33,14 +33,14 @@ int BCNN(int a, int b){
     if ( a == 0 || b == 0)
         return 0;
     else {
-        if ( a > b ){
-                for ( int i = a; i <= a*b ; a++)
-                    if ( i % b == 0)
+        if ( b > a ){
+                for ( int i = a; i <= a*b ; i++)
+                    if ( i % b == 0 && i % a == 0)
                         return i;
             }
         else {
-            for ( int i = b; i <= a*b ; a++)
-                if ( i % a == 0)
+            for ( int i = a; i <= a*b ; i++)
+                if ( i % b == 0 && i % b == 0)
                     return i;
             }
         }
