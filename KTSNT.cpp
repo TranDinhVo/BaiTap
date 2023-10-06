@@ -7,6 +7,7 @@ int main(void){
     int n;
         printf (" Nhap n : ");
         scanf ("%d", &n);
+
     if (KTSNT(n) == 1)
         printf ("La so nguyen to  ");
     else
@@ -16,9 +17,13 @@ int main(void){
     return 0;
 }
 int KTSNT( int x ){
-    for ( int i = 2; i <=sqrt(x); i++ ){
-        if ( x % i == 0 )
-            return 0;
+    if ( x < 2)
+        return 0;
+    else {
+        for ( int i = 2; i <=sqrt(x); i++ ){
+            if ( x % i == 0 )
+                return 0;
+        }
     }
     return 1;
 }
