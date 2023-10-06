@@ -5,10 +5,8 @@ int KTSNT(int x);
 
 int main(void){
     int n;
-    do {
         printf (" Nhap n : ");
         scanf ("%d", &n);
-    }while (n < 2 );
     if (KTSNT(n) == 1)
         printf ("La so nguyen to  ");
     else
