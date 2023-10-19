@@ -20,28 +20,52 @@ struct PhanSo Thuong ( struct PhanSo a[], int n);
 int main (void){
     int n;
     struct PhanSo a[100];
-    do {
-        printf (" Nhap N = ");
-        scanf ("%d", &n);
-    }while ( n < 1);
-    NhapDay (a, n);
-    printf (" Day so Vua Nhap la : \n");
-    
-    XuatDay (a, n);
-// Tong Day so
-    Tong (a, n);
-    
-// Hieu Day so
-   Hieu (a, n);
-    
-// Tich day so
-    Tich (a, n);
-    
-// Thuong day so
-    Thuong (a, n);
-    
-    printf ("\n");
-
+    int choose = 1;
+    while ( choose != 7 ){
+        printf ("\n\n==========MENU==========\n");
+        printf ("1.Nhap Day ");
+        printf ("\n2.Xuat Day ");
+        printf ("\n3.Tinh Tong Day");
+        printf ("\n4.Tinh Hieu Day");
+        printf ("\n5.Tinh Tich Day");
+        printf ("\n6.Tinh Thuong Day");
+        printf ("\n7.Thoat Chuong Trinh");
+        printf ("\nXin Moi Chon : ");
+        scanf("%d", &choose);
+        
+        switch (choose ){
+            case 1:
+                do {
+                    printf (" Nhap N = ");
+                    scanf ("%d", &n);
+                }while ( n < 1);
+                NhapDay (a, n);
+                break;
+            case 2:
+                printf (" Day so Vua Nhap la : \n");
+                XuatDay (a, n);
+                break;
+            case 3:
+                // Tong Day so
+                    Tong (a, n);
+                break;
+            case 4:
+                // Hieu Day so
+                   Hieu (a, n);
+                break;
+            case 5:
+                // Tich day so
+                    Tich (a, n);
+                break;
+            case 6:
+                // Thuong day so
+                    Thuong (a, n);
+                break;
+            case 7:
+                printf ("Cam On Ban Da Su Dung Dich Vu :))) ");
+                break;
+        }
+    }
 }
 
 void NhapPS ( struct PhanSo *ps){
