@@ -13,11 +13,10 @@ int main(void){
     int ss = 0;
     int dem = 0;
     for (int j = 1; j <= n; j++){
-        for (int i = 1; i <= 2 ; i++ ){
+        for (int i = 1; i <= 1 ; i++ ){
             
             if ( a[i][j] >= a[i+1][j] )
                 dem += 1;
-            
             else
             {
                 if ( dem > ss ){
@@ -25,11 +24,10 @@ int main(void){
                     dem = 0;
                 }
                 else dem = 0;
+                
             }
-            
         }
     }
-    
     printf ("KQ : %d ", ss);
     return 0;
 }
