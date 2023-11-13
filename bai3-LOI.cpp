@@ -1,10 +1,9 @@
-
 #include <stdio.h>
 
 
 int main(void){
     int arr[2*10*10*10*10*10], N;
-    int    b[100];
+    int    arr2[100];
     do {
         printf ("Nhap :  ");
         scanf ("%d", &N);
@@ -17,23 +16,21 @@ int main(void){
         int dem = 0;
         for ( int i = 2; i <= N; i++)
         {
-            for ( int a = 1; a <= i; a++){
-                   int b = a;
-                   
-                    if ( b == i)
-                       dem++;
-                    else
-                        b = b + arr[b];
-                 
-          
+            for ( int a = 1; a < i; a++){
+                    int b = a + arr[a];
+                    while (b < i){
+                    	b = b + arr[b];
+					}
+					if ( b == i )
+					   dem++;		
             }
-            b[i] = dem;
+            arr2[i] = dem;
             dem = 0;
         }
         
     
     for ( int i = 1; i <= N; i++){
-        printf ("%d ", b[i]);
+        printf ("%d ", arr2[i]);
     }
     printf ("\n\n----------------------------------");
     printf ("\n\n\n");
