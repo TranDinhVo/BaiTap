@@ -4,6 +4,7 @@
 
 int main(void){
     int arr[2*10*10*10*10*10], N;
+    int    b[100];
     do {
         printf ("Nhap :  ");
         scanf ("%d", &N);
@@ -14,26 +15,25 @@ int main(void){
     }
     
         int dem = 0;
-        for ( int i = 1; i <= N; i++)
+        for ( int i = 2; i <= N; i++)
         {
-            for ( int a = 1; a < N; a++){
-                int b = a;
-                while (b < i){
+            for ( int a = 1; a <= i; a++){
+                   int b = a;
+                   
                     if ( b == i)
                        dem++;
                     else
                         b = b + arr[b];
-            }
+                 
           
             }
-            arr[i] = dem;
+            b[i] = dem;
             dem = 0;
-            
         }
         
     
     for ( int i = 1; i <= N; i++){
-        printf ("%d ", arr[i]);
+        printf ("%d ", b[i]);
     }
     printf ("\n\n----------------------------------");
     printf ("\n\n\n");
